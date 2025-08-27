@@ -1,0 +1,22 @@
+{
+  "name": "cookie-thief",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "get-ua": "chrome-cli execute 'navigator.appVersion'",
+    "start": "node index.js",
+    "build": "pkg index.js --targets node18-linux-x64,node18-macos-x64 --out-path dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "chrome-cli": "^1.1.1",
+    "pkg": "^5.8.1"
+  }
+}
