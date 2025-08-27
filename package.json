@@ -5,8 +5,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "get-ua": "chrome-cli execute 'navigator.appVersion'",
+    "t": "CHROME_BUNDLE_IDENTIFIER=\"com.google.Chrome\" chrome-cli list tabs",
+    "v": "mdls -name kMDItemCFBundleIdentifier -raw '/Applications/Google Chrome.app'",
     "start": "node index.js",
-    "build": "pkg index.js --targets node18-linux-x64,node18-macos-x64 --out-path dist"
+    "prebuild": "rm -rf dist",
+    "build": "pkg index.js --targets node18-linux-x64,node18-macos-arm64 --out-path dist"
   },
   "keywords": [],
   "author": "",
